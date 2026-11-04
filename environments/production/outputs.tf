@@ -1,0 +1,1 @@
+output "production_load_balancer_url" { value = module.compute_cluster.lb_dns_name }
