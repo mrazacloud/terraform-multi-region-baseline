@@ -37,13 +37,13 @@ resource "aws_security_group" "db" {
 
 # 3. Encrypted PostgreSQL Instance (HIPAA Compliant Blueprint)
 resource "aws_db_instance" "postgres" {
-  identifier           = "${var.environment}-medical-registry-db"
-  allocated_storage    = 20
+  identifier            = "${var.environment}-medical-registry-db"
+  allocated_storage     = 20
   max_allocated_storage = 100
-  engine               = "postgres"
-  engine_version       = "15.4"
-  instance_class       = var.db_instance_class
-  
+  engine                = "postgres"
+  engine_version        = "15.4"
+  instance_class        = var.db_instance_class
+
   # Credentials handled dynamically via variables
   db_name  = var.database_name
   username = var.admin_username
